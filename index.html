@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuadBreak | Multi-strategy gold EA for MetaTrader 5</title>
+<meta name="description" content="QuadBreak is a systematic, multi-strategy Expert Advisor for XAUUSD on MetaTrader 5: nine independent strategies, volatility-targeted risk, and three risk profiles.">
+<meta property="og:title" content="QuadBreak | Multi-strategy gold EA for MetaTrader 5">
+<meta property="og:description" content="Nine independent strategies, one portfolio. Volatility-targeted risk, three risk profiles, validated out-of-sample on tick data.">
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body class="qb site">
+
+<header class="top"><div class="inner">
+<a class="qb-brand" href="#top"><span class="qb-logo">QB</span><span class="qb-name">QuadBreak</span></a>
+<nav><a href="#results">Results</a><a href="#profiles-sec">Risk profiles</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="btn sm" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">Contact</a></nav>
+</div></header>
+
+<main class="inner" id="top">
+
+<section class="hero">
+<div class="qb-pills"><span class="pill live"><i></i>Live forward test running</span><span class="pill">XAUUSD</span><span class="pill">MetaTrader 5</span><span class="pill">v1.60</span></div>
+<h1>Nine strategies.<br>One disciplined gold portfolio.</h1>
+<p class="lead">QuadBreak is a systematic Expert Advisor for gold (XAUUSD) on MetaTrader 5. It runs nine independent strategies as one portfolio and scales position size down automatically when market volatility rises.</p>
+<div class="cta"><a class="btn" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">Email to ask about access</a><a class="btn ghost" href="#results">See the results</a></div>
+<div class="hero-stats">
+<div><span>Avg. monthly growth</span><b class="up">40.6%</b></div>
+<div><span>Max drawdown</span><b class="dn">49.2%</b></div>
+<div><span>Sharpe ratio</span><b>3.08</b></div>
+<div><span>Profitable months</span><b>22 / 23</b></div>
+</div>
+<p class="fine">Hypothetical backtest, High risk profile, Jan 2025 – Nov 2026, weakest of four cost conditions. Lower-risk profiles are shown below. Past and simulated results don't guarantee future returns.</p>
+</section>
+
+<section id="how">
+<h2>How it works</h2>
+<p class="sec-lead">Four layers, each with one job. Strategy logic and parameters stay private, so the edge isn't copied away.</p>
+<div class="qb-arch">
+<div class="mod"><div class="ic">◈</div><b>Signal layer</b><span>9 independent strategies on gold, each with its own logic</span></div>
+<div class="arrow">→</div>
+<div class="mod"><div class="ic">◐</div><b>Risk engine</b><span>Fixed risk per strategy, scaled down when recent portfolio volatility rises</span></div>
+<div class="arrow">→</div>
+<div class="mod"><div class="ic">▲</div><b>Execution</b><span>Native MQL5 Expert Advisor running on your own MT5 account</span></div>
+<div class="arrow">→</div>
+<div class="mod"><div class="ic">◉</div><b>Monitoring</b><span>On-chart panel, kill switch and spread guard</span></div>
+</div>
+<div class="feat3">
+<div><b>Diversified by design</b><p>Strategies with different logic and holding times rarely lose together, so the portfolio is smoother than any single strategy.</p></div>
+<div><b>Risk you choose</b><p>Pick a profile from about 10% to about 50% max drawdown. The signals and trades are the same; only position size changes.</p></div>
+<div><b>You stay in control</b><p>It runs on your own broker account. Your money never leaves your account, and you can pause it at any time.</p></div>
+</div>
+</section>
+
+<section id="profiles-sec">
+<h2>Choose your risk</h2>
+<p class="sec-lead">Same signals and trades in every profile, only position size differs. Most people should start with Low or Medium.</p>
+<div class="qb-card">
+<div class="tablewrap"><table class="qb-table profiles" aria-label="QuadBreak risk profiles compared">
+<thead><tr><th>Profile</th><th>Risk per strategy</th><th>Avg. monthly growth</th><th>Max drawdown</th><th>Worst-case drawdown</th><th>Sharpe</th><th>Calmar</th><th>$1,000 grows to</th></tr></thead>
+<tbody id="profiles"></tbody>
+</table></div>
+<p class="muted" style="margin:10px 0 2px;font-size:12.5px">Hypothetical backtest, Jan 2025 – Nov 2026. Low and Medium are scaled in hindsight so the full-period max drawdown lands near 10% and 20%. Worst-case drawdown is the highest of four cost conditions. The charts below show High.</p>
+</div>
+</section>
+
+<section id="results">
+<h2>Results</h2>
+<p class="sec-lead">Simulated on more than 151 million ticks with realistic spreads, commissions and latency. The numbers use the weakest of four cost conditions tested.</p>
+
+<div class="qb-kpis">
+<div><span>Avg. monthly growth</span><b data-kpi="avg_month">40.6%</b></div>
+<div><span>Max drawdown</span><b data-kpi="mdd">49.2%</b></div>
+<div><span>Sharpe</span><b data-kpi="sharpe">3.08</b></div>
+<div><span>Sortino</span><b data-kpi="sortino">10.3</b></div>
+<div><span>Calmar</span><b data-kpi="calmar">119</b></div>
+<div><span>Profit factor</span><b data-kpi="pf">1.39</b></div>
+<div><span>Win rate</span><b data-kpi="win">46%</b></div>
+<div><span>Trades</span><b data-kpi="trades">1,678</b></div>
+<div><span>Profitable months</span><b data-kpi="pos_months">22/23</b></div>
+</div>
+
+<div class="qb-card">
+<div class="qb-card-head"><b>Equity <span class="muted">growth of $1,000, log scale · High profile</span></b>
+<div class="legend chart-legend"><span class="sw main"></span>Raw spread (worst) <span class="sw ctx"></span>Other 3 conditions</div>
+</div>
+<div class="chart-host" id="chart-equity" aria-label="Growth of $1,000, log scale"></div>
+<div class="qb-card-head sub-head"><b>Drawdown <span class="muted">worst intraday drop from the running peak</span></b></div>
+<div class="chart-host" id="chart-dd" aria-label="Drawdown chart"></div>
+</div>
+
+<div class="qb-card">
+<div class="qb-card-head"><b>Return by period</b><span class="muted">fresh $1,000 start · worst of the four conditions · High profile</span></div>
+<div class="tablewrap"><table class="qb-table periods" aria-label="Results by period">
+<thead><tr><th>Period</th><th>Avg. monthly growth</th><th>Max drawdown</th></tr></thead>
+<tbody>
+<tr><td>2025 <em>out-of-sample</em></td><td data-pg="2025"></td><td data-pm="2025"></td></tr>
+<tr><td>Jan–Jun 2026 <em class="train">training</em></td><td data-pg="Train"></td><td data-pm="Train"></td></tr>
+<tr><td>Jul–Nov 2026 <em>out-of-sample</em></td><td data-pg="JulNov"></td><td data-pm="JulNov"></td></tr>
+</tbody>
+</table></div>
+<p class="muted" style="margin:10px 0 2px;font-size:12.5px">Settings were chosen on the training period only. 2025 and Jul–Nov 2026 are data the system never saw while it was being tuned.</p>
+</div>
+
+<div class="qb-card">
+<div class="qb-card-head"><b>Monthly returns</b><span class="muted">raw-spread condition · High profile</span></div>
+<div id="heatmap" class="heat" aria-label="Monthly returns heatmap"></div>
+</div>
+
+<div class="qb-card cal-card">
+<div class="qb-card-head"><b>Daily P&amp;L</b><span class="muted">raw-spread condition · High profile</span></div>
+<div id="calendar" class="cal"></div>
+<div class="chart-tip cal-tip" hidden></div>
+</div>
+
+<div class="qb-card">
+<div class="qb-card-head"><b>Strategy breakdown</b><span class="muted">9 strategies, anonymized · in R (1R = the risk on one trade)</span></div>
+<div id="strategies"></div>
+<p class="muted" style="margin:10px 0 4px;font-size:12.5px">R-multiples measure each strategy's quality independent of position size, so this table is the same for every risk profile.</p>
+</div>
+</section>
+
+<section id="testing">
+<h2>How it was tested</h2>
+<div class="checks4">
+<div><b>12-condition cost battery</b><p>Every result was re-run under different spreads, commissions and execution delays. The figures on this page use the weakest one.</p></div>
+<div><b>Out-of-sample periods</b><p>Settings were fixed on Jan–Jun 2026 only, then judged on 2025 and Jul–Nov 2026.</p></div>
+<div><b>Lookahead and random-twin tests</b><p>Each strategy was checked for accidental use of future data and compared against randomized copies of itself.</p></div>
+<div><b>Independent re-implementation</b><p>Key results were reproduced by a second, independent implementation before they were trusted.</p></div>
+</div>
+</section>
+
+<section id="fit" class="two">
+<div class="qb-card fit yes"><b>A good fit if you</b>
+<ul><li>Trade gold on MetaTrader 5 or are willing to open an MT5 account</li><li>Can leave the EA running on a VPS through the trading week</li><li>Accept that drawdowns happen, and pick a profile whose drawdown you can sit through</li><li>Think in months, not days</li></ul></div>
+<div class="qb-card fit no"><b>Not a fit if you</b>
+<ul><li>Need guaranteed or steady income</li><li>Would stop the system in the middle of a normal drawdown</li><li>Are trading money you can't afford to lose</li><li>Want to see or change the strategy rules</li></ul></div>
+</section>
+
+<section id="faq">
+<h2>FAQ</h2>
+<details><summary>Is QuadBreak trading live?</summary><p>Yes. v1.60 is running on a live account as a forward test. The charts on this page are backtests; ask by email for the latest forward-test figures.</p></details>
+<details><summary>Do you manage my money?</summary><p>No. QuadBreak runs on your own MetaTrader 5 account with your own broker. Your funds stay in your account, and you can pause or remove the EA at any time.</p></details>
+<details><summary>What do I need to run it?</summary><p>An MT5 account with a broker that offers XAUUSD, ideally with low spreads and commissions, and a Windows VPS so it can run without interruption.</p></details>
+<details><summary>Which risk profile should I use?</summary><p>Start with Low or Medium. High is the setting with the biggest returns in the backtest, but it also went through a drawdown of about 50%, which most people find very hard to sit through.</p></details>
+<details><summary>Can I see the strategies?</summary><p>No. The logic and parameters stay private. You get the compiled EA, the risk settings and the results.</p></details>
+<details><summary>Why does my broker matter?</summary><p>Spreads, commissions and execution speed change results. QuadBreak's figures already use the weakest of four cost conditions, but a high-cost broker will still do worse.</p></details>
+<details><summary>How much does it cost?</summary><p>Send an email and I'll reply with the subscription options and setup details.</p></details>
+</section>
+
+<section id="contact" class="contact">
+<h2>Interested?</h2>
+<p class="sec-lead">Send an email with your broker, account size and the risk profile you have in mind, and I'll get back to you with access and setup details.</p>
+<a class="btn" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">suraporn83@gmail.com</a>
+</section>
+
+</main>
+
+<footer class="foot"><div class="inner">
+<p><b>Risk warning.</b> Trading leveraged products such as gold CFDs carries a high level of risk and can result in the loss of all of your capital. The results on this page are hypothetical backtests, run on historical data with simulated costs. They are not live trading results, they have limitations, and they don't guarantee future performance. Nothing on this page is financial advice. Only trade with money you can afford to lose.</p>
+<p>© 2026 QuadBreak</p>
+</div></footer>
+
+<script src="charts.js?v=1"></script>
+</body>
+</html>
