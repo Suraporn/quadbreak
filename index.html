@@ -16,7 +16,7 @@
 
 <header class="top"><div class="inner">
 <a class="qb-brand" href="#top"><span class="qb-logo">QB</span><span class="qb-name">QuadBreak</span></a>
-<nav><a href="#results">Results</a><a href="#profiles-sec">Risk profiles</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="btn sm" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">Contact</a></nav>
+<nav><a href="#how">How it works</a><a href="#results">Results</a><a href="#profiles-sec">Risk profiles</a><a href="#faq">FAQ</a><a class="btn sm" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">Contact</a></nav>
 </div></header>
 
 <main class="inner" id="top">
@@ -32,7 +32,7 @@
 <div><span>Sharpe ratio</span><b>3.08</b></div>
 <div><span>Profitable months</span><b>22 / 23</b></div>
 </div>
-<p class="fine">Hypothetical backtest, High risk profile, Jan 2025 – Nov 2026, weakest of four cost conditions. Lower-risk profiles are shown below. Past and simulated results don't guarantee future returns.</p>
+<p class="fine">Hypothetical backtest, High risk profile, Jan 2025 – Nov 2026, weakest of four cost conditions. Lower-risk profiles are compared further down. Past and simulated results don't guarantee future returns.</p>
 </section>
 
 <section id="how">
@@ -54,17 +54,6 @@
 </div>
 </section>
 
-<section id="profiles-sec">
-<h2>Choose your risk</h2>
-<p class="sec-lead">Same signals and trades in every profile, only position size differs. Most people should start with Low or Medium.</p>
-<div class="qb-card">
-<div class="tablewrap"><table class="qb-table profiles" aria-label="QuadBreak risk profiles compared">
-<thead><tr><th>Profile</th><th>Risk per strategy</th><th>Avg. monthly growth</th><th>Max drawdown</th><th>Worst-case drawdown</th><th>Sharpe</th><th>Calmar</th><th>$1,000 grows to</th></tr></thead>
-<tbody id="profiles"></tbody>
-</table></div>
-<p class="muted" style="margin:10px 0 2px;font-size:12.5px">Hypothetical backtest, Jan 2025 – Nov 2026. Low and Medium are scaled in hindsight so the full-period max drawdown lands near 10% and 20%. Worst-case drawdown is the highest of four cost conditions. The charts below show High.</p>
-</div>
-</section>
 
 <section id="results">
 <h2>Results</h2>
@@ -119,6 +108,18 @@
 <div class="qb-card-head"><b>Strategy breakdown</b><span class="muted">9 strategies, anonymized · in R (1R = the risk on one trade)</span></div>
 <div id="strategies"></div>
 <p class="muted" style="margin:10px 0 4px;font-size:12.5px">R-multiples measure each strategy's quality independent of position size, so this table is the same for every risk profile.</p>
+</div>
+</section>
+
+<section id="profiles-sec">
+<h2>Choose your risk</h2>
+<p class="sec-lead">Same signals and trades in every profile, only position size differs. Most people should start with Low or Medium.</p>
+<div class="qb-card">
+<div class="tablewrap"><table class="qb-table profiles" aria-label="QuadBreak risk profiles compared">
+<thead><tr><th>Profile</th><th>Risk per strategy</th><th>Avg. monthly growth</th><th>Max drawdown</th><th>Worst-case drawdown</th><th>Sharpe</th><th>Calmar</th><th>$1,000 grows to</th></tr></thead>
+<tbody id="profiles"></tbody>
+</table></div>
+<p class="muted" style="margin:10px 0 2px;font-size:12.5px">Hypothetical backtest, Jan 2025 – Nov 2026. Low and Medium are scaled in hindsight so the full-period max drawdown lands near 10% and 20%. Worst-case drawdown is the highest of four cost conditions. The results above show High.</p>
 </div>
 </section>
 
