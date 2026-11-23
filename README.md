@@ -48,6 +48,19 @@ Settings were chosen on the training period only. The two out-of-sample periods 
 - **Lookahead and random-twin tests:** checks for accidental use of future data, and comparison against randomized copies
 - **Independent re-implementation:** key results reproduced by a second implementation before being trusted
 
+## Version history
+
+| Version | What changed |
+|---|---|
+| v1.00 | First multi-strategy portfolio |
+| v1.20 | Improved exits |
+| v1.30 | Portfolio volatility targeting |
+| v1.40 | Two new strategies, 7 in total |
+| v1.50 | All 9 strategies combined at equal risk |
+| **v1.60** | **Volatility targeting across all 9 strategies · now forward-testing on a live account** |
+
+Every version ships only after passing the full test battery. Updates are included in the subscription, and each new version also goes through a forward-test period before release.
+
 ## Requirements
 
 - MetaTrader 5 account with a broker offering XAUUSD (low spreads and commissions recommended)
