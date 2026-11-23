@@ -16,7 +16,7 @@
 
 <header class="top"><div class="inner">
 <a class="qb-brand" href="#top"><span class="qb-logo">QB</span><span class="qb-name">QuadBreak</span></a>
-<nav><a href="#how">How it works</a><a href="#results">Results</a><a href="#profiles-sec">Risk profiles</a><a href="#faq">FAQ</a><a class="btn sm" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">Contact</a></nav>
+<nav><a href="#how">How it works</a><a href="#results">Results</a><a href="#profiles-sec">Risk profiles</a><a href="#faq">FAQ</a><a class="btn sm" href="#contact" data-mail>Contact</a></nav>
 </div></header>
 
 <main class="inner" id="top">
@@ -25,7 +25,7 @@
 <div class="qb-pills"><span class="pill live"><i></i>Live forward test running</span><span class="pill">XAUUSD</span><span class="pill">MetaTrader 5</span><span class="pill">v1.60</span></div>
 <h1>Nine strategies.<br>One disciplined gold portfolio.</h1>
 <p class="lead">QuadBreak is a systematic Expert Advisor for gold (XAUUSD) on MetaTrader 5. It runs nine independent strategies as one portfolio and scales position size down automatically when market volatility rises.</p>
-<div class="cta"><a class="btn" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">Email to ask about access</a><a class="btn ghost" href="#results">See the results</a></div>
+<div class="cta"><a class="btn" href="#contact" data-mail>Email to ask about access</a><a class="btn ghost" href="#results">See the results</a></div>
 <div class="hero-stats">
 <div><span>Avg. monthly growth</span><b class="up">40.6%</b></div>
 <div><span>Max drawdown</span><b class="dn">49.2%</b></div>
@@ -154,7 +154,7 @@
 <section id="contact" class="contact">
 <h2>Interested?</h2>
 <p class="sec-lead">Send an email with your broker, account size and the risk profile you have in mind, and I'll get back to you with access and setup details.</p>
-<a class="btn" href="mailto:suraporn83@gmail.com?subject=QuadBreak%20inquiry">suraporn83@gmail.com</a>
+<a class="btn" href="#contact" data-mail>Email QuadBreak</a>
 </section>
 
 </main>
@@ -164,6 +164,14 @@
 <p>© 2026 QuadBreak</p>
 </div></footer>
 
+<script>
+document.querySelectorAll("[data-mail]").forEach(function (a) {
+  a.addEventListener("click", function (e) {
+    e.preventDefault();
+    location.href = "mail" + "to:" + ["suraporn83", "gmail.com"].join("@") + "?subject=" + encodeURIComponent("QuadBreak inquiry");
+  });
+});
+</script>
 <script src="charts.js?v=1"></script>
 </body>
 </html>
