@@ -116,11 +116,11 @@
   }
   function green(t) {
     t = Math.sqrt(Math.min(Math.max(t, 0), 1)); const L = (a, b) => Math.round(a + (b - a) * t);
-    return `rgb(${L(20, 74)},${L(60, 222)},${L(36, 128)})`;
+    return `rgb(${L(112, 22)},${L(180, 112)},${L(132, 56)})`;   // mid green -> deep green
   }
   function red(t) {
     t = Math.sqrt(Math.min(Math.max(t, 0), 1)); const L = (a, b) => Math.round(a + (b - a) * t);
-    return `rgb(${L(80, 248)},${L(24, 113)},${L(28, 113)})`;
+    return `rgb(${L(214, 160)},${L(120, 26)},${L(120, 26)})`;  // mid red -> deep red
   }
   function blue(t) {
     t = Math.sqrt(Math.min(Math.max(t, 0), 1)); const L = (a, b) => Math.round(a + (b - a) * t);
@@ -130,7 +130,7 @@
   function heatmap(host, B, V) {
     const years = [...new Set(B.months.map((m) => m.slice(0, 4)))];
     const val = {}; B.months.forEach((m, i) => { val[m] = V.mret[i]; });
-    const vmax = Math.max(...V.mret), dec = vmax < 20 ? 1 : 0;
+    const vmax = Math.max(...V.mret), dec = vmax < 40 ? 1 : 0;
     let h = '<table><thead><tr><th class="y"></th>' + MON.map((m) => `<th>${m}</th>`).join("") + "</tr></thead><tbody>";
     years.forEach((y) => {
       h += `<tr><th class="y">${y}</th>`;
@@ -139,8 +139,8 @@
         if (v === undefined) { h += '<td class="empty"></td>'; continue; }
         const partial = k === B.months[B.months.length - 1] ? " (to Nov 12)" : "";
         const t = v / vmax;
-        h += v < 0 ? `<td class="neg" style="background:${red(Math.min(-v / vmax * 3, 1))}" title="${MON[m - 1]} ${y}${partial}: ${v.toFixed(1)}%">${v.toFixed(dec)}%</td>`
-                   : `<td style="background:${green(t)};color:${Math.sqrt(t) < 0.55 ? "#eafff1" : "#06240f"}" title="${MON[m - 1]} ${y}${partial}: +${v.toFixed(1)}%">+${v.toFixed(dec)}%</td>`;
+        h += v < 0 ? `<td class="neg" style="background:${red(Math.min(-v / vmax * 3, 1))};color:#fff" title="${MON[m - 1]} ${y}${partial}: ${v.toFixed(1)}%">${v.toFixed(dec)}%</td>`
+                   : `<td style="background:${green(t)};color:#fff" title="${MON[m - 1]} ${y}${partial}: +${v.toFixed(1)}%">+${v.toFixed(dec)}%</td>`;
       }
       h += "</tr>";
     });
