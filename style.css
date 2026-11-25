@@ -228,3 +228,8 @@ footer.foot b{color:var(--qmuted)}
 .timeline li.now b{color:var(--qup)}
 .timeline span{display:block;color:var(--qmuted);font-size:13.5px;margin-top:4px}
 @media (max-width:900px){.timeline{grid-template-columns:1fr}.timeline li{border-top:0;border-left:2px solid var(--qline);padding:0 0 16px 20px}.timeline li::before{left:-7px;top:2px}}
+
+.cal-row{display:grid;grid-template-columns:30px 1fr;gap:6px}
+.cal-d{display:grid;grid-template-rows:repeat(5,1fr);gap:3px;font:500 10px var(--mono);color:var(--qmuted)}
+.cal-d span{display:flex;align-items:center}
+@media (max-width:760px){.cal-row{grid-template-columns:22px 1fr;gap:3px}.cal-d{font-size:8px;gap:2px}}
